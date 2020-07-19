@@ -1,4 +1,4 @@
-class FormAbstractService < FormService
+class UserInputFormAbstractService < FormService
   include Singleton
 
   def initialize; end

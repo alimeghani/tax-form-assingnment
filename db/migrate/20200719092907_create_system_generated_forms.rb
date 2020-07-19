@@ -1,7 +1,7 @@
 class CreateSystemGeneratedForms < ActiveRecord::Migration[6.0]
   def change
     create_table :system_generated_forms do |t|
-      t.numeric :total_taxpaid
+      t.numeric :total_tax_paid
       t.numeric :total_tax_liability
       t.integer :total_difference
       t.numeric :total_taxable_income
