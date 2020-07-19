@@ -3223,3 +3223,1564 @@ MethodNotImplementedException: MethodNotImplementedException
 Completed 500 Internal Server Error in 9ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 5466)
 
 
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:39:05 +0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mForm Load (0.4ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:10:in `submit_form'
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 4.6ms | Allocations: 4932)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:47:03 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mForm Load (0.4ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:10:in `submit_form'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 4129)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:47:07 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:10:in `submit_form'
+ApplicationError: Incorrect Request
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_1099_service.rb:7:in `verify_request'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_service.rb:5:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_abstract_service.rb:10:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:11:in `submit_form'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:195:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 500 Internal Server Error in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 2282)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:48:05 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mForm Load (0.2ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:10:in `submit_form'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 4.6ms | Allocations: 4221)
+
+
+  
+ApplicationError (Incorrect Request):
+  
+app/services/form_1099_service.rb:7:in `verify_request'
+app/services/form_service.rb:5:in `perform'
+app/services/form_abstract_service.rb:10:in `perform'
+app/controllers/api/v1/forms_controller.rb:11:in `submit_form'
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:48:34 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mForm Load (0.2ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:10:in `submit_form'
+ApplicationError: Incorrect Request
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_1099_service.rb:7:in `verify_request'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_service.rb:5:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_abstract_service.rb:10:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:11:in `submit_form'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:195:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 3.1ms | Allocations: 4408)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:48:38 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:10:in `submit_form'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 805)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:53:13 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:10:in `submit_form'
+  [1m[36mForm Load (0.2ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:11:in `submit_form'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 3.4ms | Allocations: 4565)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:53:16 +0500
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "user_id": a,
+    "total_income": 100005.56,
+    "total_business_expense": 5000.50,
+    "total_miles_driven": 560
+}
+  
+ActionDispatch::Http::Parameters::ParseError (783: unexpected token at '{
+    "user_id": a,
+    "total_income": 100005.56,
+    "total_business_expense": 5000.50,
+    "total_miles_driven": 560
+}'):
+  
+actionpack (6.0.3.2) lib/action_dispatch/http/parameters.rb:114:in `rescue in parse_formatted_parameters'
+actionpack (6.0.3.2) lib/action_dispatch/http/parameters.rb:110:in `parse_formatted_parameters'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:389:in `block in POST'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:388:in `POST'
+actionpack (6.0.3.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.3.2) lib/action_controller/metal/params_wrapper.rb:278:in `_wrapper_enabled?'
+actionpack (6.0.3.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "user_id": a,
+    "total_income": 100005.56,
+    "total_business_expense": 5000.50,
+    "total_miles_driven": 560
+}
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:53:19 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>6, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:10:in `submit_form'
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:11:in `submit_form'
+ActiveRecord::RecordNotFound: Couldn't find Form with 'id'=6
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/core.rb:177:in `find'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:11:in `submit_form'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:195:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 404 Not Found in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 1725)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:53:20 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:10:in `submit_form'
+  [1m[36mForm Load (0.2ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:11:in `submit_form'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1330)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:56:14 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:22:in `fetch_user'
+  [1m[36mForm Load (0.2ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:26:in `fetch_form'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 5.7ms | Allocations: 6960)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:56:22 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:22:in `fetch_user'
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:26:in `fetch_form'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1348)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:57:28 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.2ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 5.7ms | Allocations: 6917)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:57:31 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+ApplicationError: User Id not present
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:22:in `fetch_user'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `invoke_before'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:134:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 614)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:57:34 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>3, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+ActiveRecord::RecordNotFound: Couldn't find User with 'id'=3
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/core.rb:177:in `find'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `invoke_before'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:134:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 404 Not Found in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1168)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:57:35 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>2, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+ActiveRecord::RecordNotFound: Couldn't find User with 'id'=2
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/core.rb:177:in `find'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `invoke_before'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:134:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 404 Not Found in 4ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 1168)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:57:36 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.2ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1349)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 16:58:09 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+NoMethodError: undefined method `before' for [:fetch_user, :fetch_form]:Array
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `invoke_before'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:134:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 500 Internal Server Error in 3ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 2121)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 17:07:34 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+NameError: undefined local variable or method `total_taxable_income' for #<Form1099Service:0x00007f8a304f5490>
+Did you mean?  taxable_income
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_1099_service.rb:12:in `calculate'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_service.rb:6:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_abstract_service.rb:10:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:17:in `submit_form'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:195:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 500 Internal Server Error in 22ms (Views: 0.2ms | ActiveRecord: 6.2ms | Allocations: 8463)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 17:07:53 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 5.7ms | Allocations: 6972)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 17:10:50 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.4ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 6.6ms | Allocations: 6974)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 17:12:05 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.2ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 5.3ms | Allocations: 7000)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 17:16:18 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+ActiveModel::UnknownAttributeError: unknown attribute 'taxable_income' for UserInputForm.
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:52:in `_assign_attribute'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:43:in `block in _assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:42:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:42:in `_assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/attribute_assignment.rb:21:in `_assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:35:in `assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/core.rb:325:in `initialize'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:70:in `new'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:70:in `new'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/persistence.rb:37:in `create'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_1099_service.rb:23:in `calculate'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_service.rb:6:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_abstract_service.rb:10:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:17:in `submit_form'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:195:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 500 Internal Server Error in 29ms (Views: 0.2ms | ActiveRecord: 8.7ms | Allocations: 13126)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 17:17:14 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+ActiveModel::UnknownAttributeError: unknown attribute 'total_business_expense' for UserInputForm.
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:52:in `_assign_attribute'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:43:in `block in _assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:42:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:42:in `_assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/attribute_assignment.rb:21:in `_assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:35:in `assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/core.rb:325:in `initialize'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:70:in `new'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:70:in `new'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/persistence.rb:37:in `create'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_1099_service.rb:23:in `calculate'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_service.rb:6:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_abstract_service.rb:10:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:17:in `submit_form'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:195:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 500 Internal Server Error in 28ms (Views: 0.2ms | ActiveRecord: 8.3ms | Allocations: 12778)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 17:19:48 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.2ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+ActiveModel::UnknownAttributeError: unknown attribute 'user' for UserInputForm.
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:52:in `_assign_attribute'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:43:in `block in _assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:42:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:42:in `_assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/attribute_assignment.rb:21:in `_assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:35:in `assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/core.rb:325:in `initialize'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:70:in `new'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:70:in `new'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/persistence.rb:37:in `create'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_1099_service.rb:23:in `calculate'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_service.rb:6:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_abstract_service.rb:10:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:17:in `submit_form'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:195:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 500 Internal Server Error in 30ms (Views: 0.2ms | ActiveRecord: 9.2ms | Allocations: 12837)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 17:21:29 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+ActiveModel::UnknownAttributeError: unknown attribute 'user' for UserInputForm.
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:52:in `_assign_attribute'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:43:in `block in _assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:42:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:42:in `_assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/attribute_assignment.rb:21:in `_assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:35:in `assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/core.rb:325:in `initialize'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:70:in `new'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:70:in `new'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/persistence.rb:37:in `create'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_1099_service.rb:25:in `calculate'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_service.rb:6:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_abstract_service.rb:10:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:17:in `submit_form'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:195:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 500 Internal Server Error in 38ms (Views: 0.2ms | ActiveRecord: 12.1ms | Allocations: 12815)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 17:21:49 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+ActiveModel::UnknownAttributeError: unknown attribute 'form' for UserInputForm.
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:52:in `_assign_attribute'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:43:in `block in _assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:42:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:42:in `_assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/attribute_assignment.rb:21:in `_assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activemodel-6.0.3.2/lib/active_model/attribute_assignment.rb:35:in `assign_attributes'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/core.rb:325:in `initialize'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:70:in `new'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:70:in `new'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/persistence.rb:37:in `create'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_1099_service.rb:23:in `calculate'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_service.rb:6:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_abstract_service.rb:10:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:17:in `submit_form'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:195:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 500 Internal Server Error in 44ms (Views: 0.3ms | ActiveRecord: 10.6ms | Allocations: 12824)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 17:22:00 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.2ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/form_1099_service.rb:23:in `calculate'
+  [1m[36mUserInputForm Create (0.8ms)[0m  [1m[32mINSERT INTO "user_input_forms" ("total_income", "total_business_expenses", "total_miles_driven", "total_taxable_income", "user_id", "form_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["total_income", "100005.56"], ["total_business_expenses", "5000.5"], ["total_miles_driven", 560], ["total_taxable_income", "92890.7694"], ["user_id", 1], ["form_id", 1], ["created_at", "2020-07-19 12:22:00.814487"], ["updated_at", "2020-07-19 12:22:00.814487"]]
+  ↳ app/services/form_1099_service.rb:23:in `calculate'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/form_1099_service.rb:23:in `calculate'
+Completed 200 OK in 34ms (Views: 0.2ms | ActiveRecord: 10.6ms | Allocations: 14939)
+
+
+Started POST "/api/v1/forms/1/submit" for ::1 at 2020-07-19 17:48:49 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>2, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "total_tax_paid"=>165000, "form_id"=>"1", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+ActiveRecord::RecordNotFound: Couldn't find User with 'id'=2
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/core.rb:177:in `find'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:513:in `invoke_before'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:134:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 404 Not Found in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1642)
+
+
+Started POST "/api/v1/forms/2/submit" for ::1 at 2020-07-19 17:48:55 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "total_tax_paid"=>165000, "form_id"=>"2", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.4ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+ApplicationError: Validation Failed
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_w2_service.rb:7:in `verify_request'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_service.rb:5:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/services/form_abstract_service.rb:12:in `perform'
+/home/vend-alishah/tax-form-app/tax-form-assingnment/app/controllers/api/v1/forms_controller.rb:17:in `submit_form'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:195:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:132:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:28:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `catch'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/web-console-4.0.4/lib/web_console/middleware.rb:17:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+/home/vend-alishah/.rvm/gems/ruby-2.7.0/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Completed 422 Unprocessable Entity in 15ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 6796)
+
+
+Started POST "/api/v1/forms/2/submit" for ::1 at 2020-07-19 17:50:23 +0500
+Processing by Api::V1::FormsController#submit_form as */*
+  Parameters: {"user_id"=>1, "total_income"=>100005.56, "total_business_expense"=>5000.5, "total_miles_driven"=>560, "total_tax_paid"=>165000, "form_id"=>"2", "form"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:23:in `fetch_user'
+  [1m[36mForm Load (0.3ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/forms_controller.rb:28:in `fetch_form'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/form_w2_service.rb:20:in `calculate'
+  [1m[36mUserInputForm Create (0.8ms)[0m  [1m[32mINSERT INTO "user_input_forms" ("total_income", "total_tax_paid", "total_taxable_income", "user_id", "form_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["total_income", "100005.56"], ["total_tax_paid", "165000.0"], ["total_taxable_income", "98005.4488"], ["user_id", 1], ["form_id", 2], ["created_at", "2020-07-19 12:50:23.923899"], ["updated_at", "2020-07-19 12:50:23.923899"]]
+  ↳ app/services/form_w2_service.rb:20:in `calculate'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/form_w2_service.rb:20:in `calculate'
+Completed 200 OK in 32ms (Views: 0.2ms | ActiveRecord: 12.2ms | Allocations: 14802)
+
+

@@ -24,6 +24,11 @@ class ApplicationController < ActionController::Base
     render_error ApplicationError.not_found(I18n.t(:not_found))
   end
 
+  rescue_from ApplicationError do |error|
+    log_error(error)
+    render_error(error)
+  end
+
   private
 
   def render_error(error)
