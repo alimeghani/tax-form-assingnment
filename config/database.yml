@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  host: localhost
+  database: tax_form
+  username: postgres
+  password: root
+  port: 5432
+
+test:
+  <<: *default
+  database: tax_form
+
+production:
+  <<: *default
+  database: tax_form_api_production
+  username: tax_form_api
+  password: <%= ENV['TAX_FORM_API_DATABASE_PASSWORD'] %>

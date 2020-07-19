@@ -1,0 +1,2 @@
+class SystemGeneratedForm < ApplicationRecord
+end
